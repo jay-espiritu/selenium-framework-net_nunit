@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jayespiritu/dev/AutomationFrameworks/SeleniumFramework/SeleniumFramework/SeleniumFramework/SeleniumFramework.csproj": {}
+    "/Users/jayespiritu/dev/AutomationFrameworks/selenium-framework-net_nunit/SeleniumFramework/SeleniumFramework/SeleniumFramework.csproj": {}
   },
   "projects": {
-    "/Users/jayespiritu/dev/AutomationFrameworks/SeleniumFramework/SeleniumFramework/SeleniumFramework/SeleniumFramework.csproj": {
+    "/Users/jayespiritu/dev/AutomationFrameworks/selenium-framework-net_nunit/SeleniumFramework/SeleniumFramework/SeleniumFramework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jayespiritu/dev/AutomationFrameworks/SeleniumFramework/SeleniumFramework/SeleniumFramework/SeleniumFramework.csproj",
+        "projectUniqueName": "/Users/jayespiritu/dev/AutomationFrameworks/selenium-framework-net_nunit/SeleniumFramework/SeleniumFramework/SeleniumFramework.csproj",
         "projectName": "SeleniumFramework",
-        "projectPath": "/Users/jayespiritu/dev/AutomationFrameworks/SeleniumFramework/SeleniumFramework/SeleniumFramework/SeleniumFramework.csproj",
+        "projectPath": "/Users/jayespiritu/dev/AutomationFrameworks/selenium-framework-net_nunit/SeleniumFramework/SeleniumFramework/SeleniumFramework.csproj",
         "packagesPath": "/Users/jayespiritu/.nuget/packages/",
-        "outputPath": "/Users/jayespiritu/dev/AutomationFrameworks/SeleniumFramework/SeleniumFramework/SeleniumFramework/obj/",
+        "outputPath": "/Users/jayespiritu/dev/AutomationFrameworks/selenium-framework-net_nunit/SeleniumFramework/SeleniumFramework/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

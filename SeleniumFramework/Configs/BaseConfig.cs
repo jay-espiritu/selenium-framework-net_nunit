@@ -1,5 +1,4 @@
 using System;
-using System.IO;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
 using OpenQA.Selenium;
@@ -9,6 +8,7 @@ using SeleniumFramework.Pages;
 
 namespace SeleniumFramework
 {
+    [TestFixture]
     public class BaseConfig
     {
         private IWebDriver driver;
@@ -39,7 +39,7 @@ namespace SeleniumFramework
             {
                 var pathFolder = "/Users/jayespiritu/dev/AutomationFrameworks/SeleniumFramework/SeleniumFramework/SeleniumFramework/Resources/Screenshots/";
                 var screenshot = ((ITakesScreenshot)driver).GetScreenshot();
-                var filename = TestContext.CurrentContext.Test.MethodName + "_" + DateTime.Now.ToString("ddmmyyyyhhmmss") + ".png";
+                var filename = TestContext.CurrentContext.Test.MethodName + "(" + DateTime.Now.ToString("ddmmyyyyhhmmss") + ").png";
                 var path = pathFolder + filename;
                 screenshot.SaveAsFile(path, ScreenshotImageFormat.Png);
                 TestContext.AddTestAttachment(path);

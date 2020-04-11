@@ -4,6 +4,7 @@ using SeleniumFramework.Pages;
 
 namespace SeleniumFramework.Tests
 {
+    [TestFixture]
     public class AlertTests : BaseConfig
     {
         [Test]
