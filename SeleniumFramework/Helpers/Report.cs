@@ -1,11 +1,14 @@
 ﻿using System;
+using ReportPortal.Shared;
+
 namespace SeleniumFramework.Helpers
 {
     public class Report
     {
-        public static void Log(string message)
+        public static void WriteLog(string message)
         {
-            Console.WriteLine(message);
+            Log.Info(message);
+            //Console.WriteLine(message);
         }
     }
 }

@@ -22,7 +22,7 @@ namespace SeleniumFramework
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl("https://the-internet.herokuapp.com/");
-            Report.Log("Initialize browser");
+            Report.WriteLog("Initialize browser");
 
             homePage = new HomePage(driver);
         }
@@ -32,7 +32,7 @@ namespace SeleniumFramework
         {
             ScreeshotOnFailure();
             driver.Quit();
-            Report.Log("Closed browser");
+            Report.WriteLog("Closed browser");
         }
 
         private void ScreeshotOnFailure()

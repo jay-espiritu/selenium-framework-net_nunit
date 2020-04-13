@@ -3,6 +3,7 @@ using SeleniumFramework.Pages;
 
 namespace SeleniumFramework.Tests
 {
+    [Parallelizable]
     [TestFixture]
     public class LoginTests : BaseConfig
     {
@@ -14,9 +15,7 @@ namespace SeleniumFramework.Tests
             loginPage.SetPassword("SuperSecretPassword!");
             SecureAreaPage secureAreaPage = loginPage.ClickLoginButton();
             secureAreaPage.GetAlertText();
-            Assert.True(
-                secureAreaPage.GetAlertText().Contains("You logged into a secure area!"),
-                "Alert text does not match");
+            Assert.True(secureAreaPage.GetAlertText().Contains("You logged into a secure area!"), "Alert text does not match");
         }
 
         [Test]
@@ -27,9 +26,7 @@ namespace SeleniumFramework.Tests
             loginPage.SetPassword("SuperSecretPassword!");
             SecureAreaPage secureAreaPage = loginPage.ClickLoginButton();
             secureAreaPage.GetAlertText();
-            Assert.AreEqual(
-                    secureAreaPage.GetAlertText().Contains("You logged into a secure area!"),
-                    "Alert text does not match");
+            Assert.AreEqual(secureAreaPage.GetAlertText(), "You logged into a secure area!", "Alert text does not match");
         }
     }
 }

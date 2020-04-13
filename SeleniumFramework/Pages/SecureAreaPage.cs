@@ -20,7 +20,7 @@ namespace SeleniumFramework.Pages
         public string GetAlertText()
         {
             string text = baseMethods.GetElementText(StatusAlert);
-            Report.Log("Alert text: " + text);
+            Report.WriteLog("Alert text: " + text);
             return text;
         }
     }

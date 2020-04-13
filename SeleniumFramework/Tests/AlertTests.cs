@@ -3,6 +3,7 @@ using SeleniumFramework.Pages;
 
 namespace SeleniumFramework.Tests
 {
+    [Parallelizable]
     [TestFixture]
     public class AlertTests : BaseConfig
     {
@@ -12,8 +13,7 @@ namespace SeleniumFramework.Tests
             AlertPage alertsPage = homePage.ClickJavaScriptAlerts("JavaScript Alerts");
             alertsPage.TriggerAlert();
             alertsPage.Alert_clickToAccept();
-            Assert.AreEqual(
-                alertsPage.GetResult(), "You successfuly clicked an alert", "Results text incorrect");
+            Assert.AreEqual(alertsPage.GetResult(), "You successfuly clicked an alert", "Results text incorrect");
         }
 
         [Test]

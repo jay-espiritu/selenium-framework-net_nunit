@@ -26,14 +26,14 @@ namespace SeleniumFramework.Pages
         public AlertPage ClickJavaScriptAlerts(string alertText)
         {
             ClickLink(alertText);
-            Report.Log("Clicked on JS alert");
+            Report.WriteLog("Clicked on JS alert");
             return new AlertPage(driver);
         }
 
         private void ClickLink(string linkText)
         {
             baseMethods.Clicked(By.LinkText(linkText));
-            Report.Log("Clicked on link" + linkText);
+            Report.WriteLog("Clicked on link" + linkText);
         }
     }
 }

@@ -6,6 +6,9 @@
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)selenium.webdriver.chromedriver/81.0.4044.6900/build/Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('$(NuGetPackageRoot)selenium.webdriver.chromedriver/81.0.4044.6900/build/Selenium.WebDriver.ChromeDriver.targets')" />
     <Import Project="$(NuGetPackageRoot)netstandard.library/2.0.0/build/netstandard2.0/NETStandard.Library.targets" Condition="Exists('$(NuGetPackageRoot)netstandard.library/2.0.0/build/netstandard2.0/NETStandard.Library.targets')" />
+    <Import Project="$(NuGetPackageRoot)reportportal.client/2.1.15/build/ReportPortal.Client.targets" Condition="Exists('$(NuGetPackageRoot)reportportal.client/2.1.15/build/ReportPortal.Client.targets')" />
+    <Import Project="$(NuGetPackageRoot)reportportal.shared/2.5.0/build/ReportPortal.Shared.targets" Condition="Exists('$(NuGetPackageRoot)reportportal.shared/2.5.0/build/ReportPortal.Shared.targets')" />
+    <Import Project="$(NuGetPackageRoot)reportportal.nunit/3.7.15/build/ReportPortal.NUnit.targets" Condition="Exists('$(NuGetPackageRoot)reportportal.nunit/3.7.15/build/ReportPortal.NUnit.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.codecoverage/16.5.0/build/netstandard1.0/Microsoft.CodeCoverage.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.codecoverage/16.5.0/build/netstandard1.0/Microsoft.CodeCoverage.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.net.test.sdk/16.5.0/build/netcoreapp2.1/Microsoft.NET.Test.Sdk.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.net.test.sdk/16.5.0/build/netcoreapp2.1/Microsoft.NET.Test.Sdk.targets')" />
   </ImportGroup>

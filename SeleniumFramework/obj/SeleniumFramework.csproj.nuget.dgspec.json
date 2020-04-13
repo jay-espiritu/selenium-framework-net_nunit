@@ -53,6 +53,18 @@
               "target": "Package",
               "version": "[3.16.1, )"
             },
+            "ReportPortal.Client": {
+              "target": "Package",
+              "version": "[2.1.15, )"
+            },
+            "ReportPortal.NUnit": {
+              "target": "Package",
+              "version": "[3.7.15, )"
+            },
+            "ReportPortal.Shared": {
+              "target": "Package",
+              "version": "[2.5.0, )"
+            },
             "Selenium.Support": {
               "target": "Package",
               "version": "[3.141.0, )"
