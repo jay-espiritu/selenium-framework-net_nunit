@@ -1,4 +1,6 @@
 using System;
+using System.IO;
+using System.Reflection;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
 using OpenQA.Selenium;
@@ -37,7 +39,8 @@ namespace SeleniumFramework
         {
             if (TestContext.CurrentContext.Result.Outcome == ResultState.Failure)
             {
-                var pathFolder = "/Users/jayespiritu/dev/AutomationFrameworks/SeleniumFramework/SeleniumFramework/SeleniumFramework/Resources/Screenshots/";
+                string folderPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                var pathFolder = folderPath + "/Resources/Screenshots/";
                 var screenshot = ((ITakesScreenshot)driver).GetScreenshot();
                 var filename = TestContext.CurrentContext.Test.MethodName + "(" + DateTime.Now.ToString("ddmmyyyyhhmmss") + ").png";
                 var path = pathFolder + filename;

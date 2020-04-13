@@ -1,5 +1,4 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using SeleniumFramework.Pages;
 
 namespace SeleniumFramework.Tests
