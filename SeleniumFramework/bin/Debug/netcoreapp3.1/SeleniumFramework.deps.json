@@ -11,6 +11,9 @@
           "Microsoft.NET.Test.Sdk": "16.5.0",
           "NUnit.ConsoleRunner": "3.11.1",
           "NUnit3TestAdapter": "3.16.1",
+          "ReportPortal.Client": "2.1.15",
+          "ReportPortal.NUnit": "3.7.15",
+          "ReportPortal.Shared": "2.5.0",
           "Selenium.Support": "3.141.0",
           "Selenium.WebDriver": "3.141.0",
           "Selenium.WebDriver.ChromeDriver": "81.0.4044.6900",
@@ -391,6 +394,36 @@
           "System.Threading.Thread": "4.3.0",
           "System.Xml.XPath.XmlDocument": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0"
+        }
+      },
+      "ReportPortal.Client/2.1.15": {
+        "runtime": {
+          "lib/netstandard2.0/ReportPortal.Client.dll": {
+            "assemblyVersion": "2.1.15.0",
+            "fileVersion": "2.1.15.0"
+          }
+        }
+      },
+      "ReportPortal.NUnit/3.7.15": {
+        "dependencies": {
+          "ReportPortal.Shared": "2.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/ReportPortal.NUnitExtension.dll": {
+            "assemblyVersion": "3.7.15.0",
+            "fileVersion": "3.7.15.0"
+          }
+        }
+      },
+      "ReportPortal.Shared/2.5.0": {
+        "dependencies": {
+          "ReportPortal.Client": "2.1.15"
+        },
+        "runtime": {
+          "lib/netstandard2.0/ReportPortal.Shared.dll": {
+            "assemblyVersion": "2.5.0.0",
+            "fileVersion": "2.5.0.0"
+          }
         }
       },
       "runtime.native.System/4.3.0": {
@@ -981,6 +1014,27 @@
       "sha512": "sha512-wKuxi7G9Gs2I9gnckwtMVzbPIy7vkNj+FafrmQPaYCUguT+se5kmzI3XwsVCXEalWk9pSYZW7roBkNu4ogn3DA==",
       "path": "nunit3testadapter/3.16.1",
       "hashPath": "nunit3testadapter.3.16.1.nupkg.sha512"
+    },
+    "ReportPortal.Client/2.1.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YCQvkgY8vkKkeFUVh+Ee3GYTU7TrBNRTDPirGSLVSx1+JSCfGoWRhdkpOaDDp3y4L7+qUb2sxnv8GoxSvC39ZA==",
+      "path": "reportportal.client/2.1.15",
+      "hashPath": "reportportal.client.2.1.15.nupkg.sha512"
+    },
+    "ReportPortal.NUnit/3.7.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UVoPxEF0M7C6xqplDO3YuYwogXsBFSXlFPFISlm3xqznfc1lL8qblMPMJCMRnHnYbaOZhUlxkdUTYSt3YJA3Sg==",
+      "path": "reportportal.nunit/3.7.15",
+      "hashPath": "reportportal.nunit.3.7.15.nupkg.sha512"
+    },
+    "ReportPortal.Shared/2.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nLWzyDXlkhSf2UP/2mpHGryDqFNNuiYdGFDRbI4G/Fp/BvDvLoCOIfiqWMGMBgjZdjISV43cr7hMen7/Xw2IKg==",
+      "path": "reportportal.shared/2.5.0",
+      "hashPath": "reportportal.shared.2.5.0.nupkg.sha512"
     },
     "runtime.native.System/4.3.0": {
       "type": "package",

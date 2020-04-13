@@ -1,0 +1,18 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/reportportal/agent-net-nunit/master/src/ReportPortal.NUnitExtension/ReportPortal.config.schema",
+  "enabled": true,
+  "server": {
+    "url": "http://localhost:8080/api/v1/",
+    "project": "default_personal",
+    "authentication": {
+      "uuid": "2b029ebf-dfc9-4d80-b654-8456b03b9d4d"
+    }
+  },
+  "launch": {
+    "name": "NUnit Tests",
+    "description": "NUnit framework tests",
+    "debugMode": false,
+    "tags": [ "nunit" ]
+  },
+  "rootNamespaces": [ "SeleniumFramework.dll", "SeleniumFramework", "Tests" ]
+}

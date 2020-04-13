@@ -22,19 +22,19 @@ namespace SeleniumFramework.Pages
         public void SetUsername(string username)
         {
             baseMethods.EnterText(username, usernameField);
-            Report.Log("Entered username with " + username);
+            Report.WriteLog("Entered username with " + username);
         }
 
         public void SetPassword(string password)
         {
             baseMethods.EnterText(password, passwordField);
-            Report.Log("Entered password with " + password);
+            Report.WriteLog("Entered password with " + password);
         }
 
         public SecureAreaPage ClickLoginButton()
         {
             baseMethods.Clicked(loginButton);
-            Report.Log("Clicked on login button");
+            Report.WriteLog("Clicked on login button");
             return new SecureAreaPage(driver);
         }
     }

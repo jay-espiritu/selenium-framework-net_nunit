@@ -23,50 +23,50 @@ namespace SeleniumFramework.Pages
         public void TriggerAlert()
         {
             baseMethods.Clicked(TriggerAlertButton);
-            Report.Log("Clicked trigger alert button");
+            Report.WriteLog("Clicked trigger alert button");
         }
 
         public void TriggerConfirm()
         {
             baseMethods.Clicked(TriggerConfirmButton);
-            Report.Log("Confirmed trigger alert");
+            Report.WriteLog("Confirmed trigger alert");
         }
 
         public void TriggerPrompt()
         {
             baseMethods.Clicked(TriggerPromptButton);
-            Report.Log("Clicked trigger prompt button");
+            Report.WriteLog("Clicked trigger prompt button");
         }
 
         public void Alert_clickToAccept()
         {
             driver.SwitchTo().Alert().Accept();
-            Report.Log("Accepted alert pop up");
+            Report.WriteLog("Accepted alert pop up");
         }
 
         public void alert_clickToDismiss()
         {
             driver.SwitchTo().Alert().Dismiss();
-            Report.Log("Dismissed alert pop up");
+            Report.WriteLog("Dismissed alert pop up");
         }
 
         public string Alert_getText()
         {
             var alertText = driver.SwitchTo().Alert().Text;
-            Report.Log("Alert text: '" + alertText + "'");
+            Report.WriteLog("Alert text: '" + alertText + "'");
             return alertText;
         }
 
         public void Alert_setInput(string text)
         {
             driver.SwitchTo().Alert().SendKeys(text);
-            Report.Log("Entered text in alert text field");
+            Report.WriteLog("Entered text in alert text field");
         }
 
         public string GetResult()
         {
             string text = baseMethods.GetElementText(Results);
-            Report.Log($"Alert text: '{text}'");
+            Report.WriteLog($"Alert text: '{text}'");
             return text;
         }
     }
