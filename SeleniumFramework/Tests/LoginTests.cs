@@ -10,7 +10,7 @@ namespace SeleniumFramework.Tests
         [Test]
         public void TestSuccessfulLogin()
         {
-            LoginPage loginPage = homePage.ClickFormAuthentication();
+            LoginPage loginPage = _homePage.ClickFormAuthentication();
             loginPage.SetUsername("tomsmith");
             loginPage.SetPassword("SuperSecretPassword!");
             SecureAreaPage secureAreaPage = loginPage.ClickLoginButton();
@@ -21,7 +21,7 @@ namespace SeleniumFramework.Tests
         [Test]
         public void TestUnsuccessfulLogin()
         {
-            LoginPage loginPage = homePage.ClickFormAuthentication();
+            LoginPage loginPage = _homePage.ClickFormAuthentication();
             loginPage.SetUsername("tomsmith!");
             loginPage.SetPassword("SuperSecretPassword!");
             SecureAreaPage secureAreaPage = loginPage.ClickLoginButton();

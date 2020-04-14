@@ -6,11 +6,11 @@ namespace SeleniumFramework.Helpers
 {
     public class BaseMethods
     {
-        private IWebDriver driver;
+        private readonly IWebDriver _driver;
 
         public BaseMethods(IWebDriver driver)
         {
-            this.driver = driver;
+            _driver = driver;
         }
 
         public IWebElement Find(By locator)
@@ -18,7 +18,7 @@ namespace SeleniumFramework.Helpers
             IWebElement element = null;
             try
             {
-                element = driver.FindElement(locator);
+                element = _driver.FindElement(locator);
             }
             catch (NoSuchElementException e)
             {

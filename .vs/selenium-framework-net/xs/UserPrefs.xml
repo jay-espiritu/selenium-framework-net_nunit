@@ -1,10 +1,11 @@
-﻿<Properties StartupConfiguration="{7209B7C8-3478-4219-A9A8-5F4C539B517B}|Default">
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{7209B7C8-3478-4219-A9A8-5F4C539B517B}|Default">
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="selenium-framework-net" expanded="True">
             <Node name="SeleniumFramework" expanded="True">
+              <Node name="Tests" expanded="True" />
               <Node name="ReportPortal.config.json" selected="True" />
             </Node>
           </Node>
@@ -12,14 +13,7 @@
       </Pad>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
-          <Node name="selenium-framework-net" expanded="True">
-            <Node name="SeleniumFramework" expanded="True">
-              <Node name="SeleniumFramework.Tests" expanded="True">
-                <Node name="AlertTests" expanded="True" />
-                <Node name="LoginTests" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
+          <Node name="selenium-framework-net" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>

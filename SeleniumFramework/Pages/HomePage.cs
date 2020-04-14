@@ -6,33 +6,33 @@ namespace SeleniumFramework.Pages
 {
     public class HomePage
     {
-        private readonly IWebDriver driver;
-        private readonly BaseMethods baseMethods;
+        private readonly IWebDriver _driver;
+        private readonly BaseMethods _baseMethods;
 
         private readonly By FormAuthenticationLink = By.LinkText("Form Authentication");
 
         public HomePage(IWebDriver driver)
         {
-            this.driver = driver;
-            baseMethods = new BaseMethods(driver);
+            this._driver = driver;
+            _baseMethods = new BaseMethods(driver);
         }
 
         public LoginPage ClickFormAuthentication()
         {
-            baseMethods.Clicked(FormAuthenticationLink);
-            return new LoginPage(driver);
+            _baseMethods.Clicked(FormAuthenticationLink);
+            return new LoginPage(_driver);
         }
 
         public AlertPage ClickJavaScriptAlerts(string alertText)
         {
             ClickLink(alertText);
             Report.WriteLog("Clicked on JS alert");
-            return new AlertPage(driver);
+            return new AlertPage(_driver);
         }
 
         private void ClickLink(string linkText)
         {
-            baseMethods.Clicked(By.LinkText(linkText));
+            _baseMethods.Clicked(By.LinkText(linkText));
             Report.WriteLog("Clicked on link" + linkText);
         }
     }

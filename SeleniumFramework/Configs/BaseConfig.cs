@@ -13,25 +13,25 @@ namespace SeleniumFramework
     [TestFixture]
     public class BaseConfig
     {
-        private IWebDriver driver;
-        protected HomePage homePage;
+        private IWebDriver _driver;
+        protected HomePage _homePage;
 
         [SetUp]
         public void Setup()
         {
-            driver = new ChromeDriver();
-            driver.Manage().Window.Maximize();
-            driver.Navigate().GoToUrl("https://the-internet.herokuapp.com/");
+            _driver = new ChromeDriver();
+            _driver.Manage().Window.Maximize();
+            _driver.Navigate().GoToUrl("https://the-internet.herokuapp.com/");
             Report.WriteLog("Initialize browser");
 
-            homePage = new HomePage(driver);
+            _homePage = new HomePage(_driver);
         }
 
         [TearDown]
         public void TearDown()
         {
             ScreeshotOnFailure();
-            driver.Quit();
+            _driver.Quit();
             Report.WriteLog("Closed browser");
         }
 
@@ -41,7 +41,7 @@ namespace SeleniumFramework
             {
                 string folderPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
                 var pathFolder = folderPath + "/Resources/Screenshots/";
-                var screenshot = ((ITakesScreenshot)driver).GetScreenshot();
+                var screenshot = ((ITakesScreenshot)_driver).GetScreenshot();
                 var filename = TestContext.CurrentContext.Test.MethodName + "(" + DateTime.Now.ToString("ddmmyyyyhhmmss") + ").png";
                 var path = pathFolder + filename;
                 screenshot.SaveAsFile(path, ScreenshotImageFormat.Png);

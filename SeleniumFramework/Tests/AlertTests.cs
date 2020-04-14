@@ -10,7 +10,7 @@ namespace SeleniumFramework.Tests
         [Test]
         public void TestAcceptAlert()
         {
-            AlertPage alertsPage = homePage.ClickJavaScriptAlerts("JavaScript Alerts");
+            AlertPage alertsPage = _homePage.ClickJavaScriptAlerts("JavaScript Alerts");
             alertsPage.TriggerAlert();
             alertsPage.Alert_clickToAccept();
             Assert.AreEqual(alertsPage.GetResult(), "You successfuly clicked an alert", "Results text incorrect");
@@ -19,7 +19,7 @@ namespace SeleniumFramework.Tests
         [Test]
         public void TestGetTextFromAlert()
         {
-            AlertPage alertsPage = homePage.ClickJavaScriptAlerts("JavaScript Alerts");
+            AlertPage alertsPage = _homePage.ClickJavaScriptAlerts("JavaScript Alerts");
             alertsPage.TriggerConfirm();
 
             string text = alertsPage.Alert_getText();
@@ -30,7 +30,7 @@ namespace SeleniumFramework.Tests
         [Test]
         public void TestSetInputInAlert()
         {
-            AlertPage alertsPage = homePage.ClickJavaScriptAlerts("JavaScript Alerts");
+            AlertPage alertsPage = _homePage.ClickJavaScriptAlerts("JavaScript Alerts");
             alertsPage.TriggerPrompt();
 
             string text = "SCREAM!";
