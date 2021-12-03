@@ -9,7 +9,7 @@ namespace SeleniumFramework.Pages
         private readonly IWebDriver _driver;
         private readonly BaseMethods _baseMethods;
 
-        private readonly By StatusAlert = By.Id("flash");
+        private readonly By _statusAlert = By.Id("flash");
 
         public SecureAreaPage(IWebDriver driver)
         {
@@ -19,7 +19,7 @@ namespace SeleniumFramework.Pages
 
         public string GetAlertText()
         {
-            string text = _baseMethods.GetElementText(StatusAlert);
+            var text = _baseMethods.GetElementText(_statusAlert);
             Report.WriteLog("Alert text: " + text);
             return text;
         }
