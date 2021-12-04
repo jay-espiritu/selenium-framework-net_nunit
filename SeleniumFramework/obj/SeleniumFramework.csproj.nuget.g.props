@@ -5,23 +5,25 @@
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">/Users/jayespiritu/.nuget/packages/</NuGetPackageRoot>
-    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">/Users/jayespiritu/.nuget/packages/;/usr/local/share/dotnet/sdk/NuGetFallbackFolder</NuGetPackageFolders>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">/Users/jayespiritu/.nuget/packages/</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
-    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.4.0</NuGetToolVersion>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.10.0</NuGetToolVersion>
   </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <SourceRoot Include="/Users/jayespiritu/.nuget/packages/" />
+  </ItemGroup>
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)reportportal.nunit/3.7.15/build/ReportPortal.NUnit.props" Condition="Exists('$(NuGetPackageRoot)reportportal.nunit/3.7.15/build/ReportPortal.NUnit.props')" />
-    <Import Project="$(NuGetPackageRoot)nunit3testadapter/3.16.1/build/netcoreapp2.1/NUnit3TestAdapter.props" Condition="Exists('$(NuGetPackageRoot)nunit3testadapter/3.16.1/build/netcoreapp2.1/NUnit3TestAdapter.props')" />
-    <Import Project="$(NuGetPackageRoot)nunit/3.12.0/build/NUnit.props" Condition="Exists('$(NuGetPackageRoot)nunit/3.12.0/build/NUnit.props')" />
-    <Import Project="$(NuGetPackageRoot)microsoft.testplatform.testhost/16.5.0/build/netcoreapp2.1/Microsoft.TestPlatform.TestHost.props" Condition="Exists('$(NuGetPackageRoot)microsoft.testplatform.testhost/16.5.0/build/netcoreapp2.1/Microsoft.TestPlatform.TestHost.props')" />
-    <Import Project="$(NuGetPackageRoot)microsoft.codecoverage/16.5.0/build/netstandard1.0/Microsoft.CodeCoverage.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codecoverage/16.5.0/build/netstandard1.0/Microsoft.CodeCoverage.props')" />
-    <Import Project="$(NuGetPackageRoot)microsoft.net.test.sdk/16.5.0/build/netcoreapp2.1/Microsoft.NET.Test.Sdk.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.test.sdk/16.5.0/build/netcoreapp2.1/Microsoft.NET.Test.Sdk.props')" />
+    <Import Project="$(NuGetPackageRoot)reportportal.nunit/4.2.0/build/netstandard2.0/ReportPortal.NUnit.props" Condition="Exists('$(NuGetPackageRoot)reportportal.nunit/4.2.0/build/netstandard2.0/ReportPortal.NUnit.props')" />
+    <Import Project="$(NuGetPackageRoot)nunit3testadapter/4.1.0/build/netcoreapp2.1/NUnit3TestAdapter.props" Condition="Exists('$(NuGetPackageRoot)nunit3testadapter/4.1.0/build/netcoreapp2.1/NUnit3TestAdapter.props')" />
+    <Import Project="$(NuGetPackageRoot)nunit/3.13.2/build/NUnit.props" Condition="Exists('$(NuGetPackageRoot)nunit/3.13.2/build/NUnit.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.testplatform.testhost/17.0.0/build/netcoreapp2.1/Microsoft.TestPlatform.TestHost.props" Condition="Exists('$(NuGetPackageRoot)microsoft.testplatform.testhost/17.0.0/build/netcoreapp2.1/Microsoft.TestPlatform.TestHost.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codecoverage/17.0.0/build/netstandard1.0/Microsoft.CodeCoverage.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codecoverage/17.0.0/build/netstandard1.0/Microsoft.CodeCoverage.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.net.test.sdk/17.0.0/build/netcoreapp2.1/Microsoft.NET.Test.Sdk.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.test.sdk/17.0.0/build/netcoreapp2.1/Microsoft.NET.Test.Sdk.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgNewtonsoft_Json Condition=" '$(PkgNewtonsoft_Json)' == '' ">/Users/jayespiritu/.nuget/packages/newtonsoft.json/10.0.3</PkgNewtonsoft_Json>
-    <PkgNUnit_ConsoleRunner Condition=" '$(PkgNUnit_ConsoleRunner)' == '' ">/Users/jayespiritu/.nuget/packages/nunit.consolerunner/3.11.1</PkgNUnit_ConsoleRunner>
+    <PkgNUnit_ConsoleRunner Condition=" '$(PkgNUnit_ConsoleRunner)' == '' ">/Users/jayespiritu/.nuget/packages/nunit.consolerunner/3.13.0</PkgNUnit_ConsoleRunner>
   </PropertyGroup>
 </Project>
