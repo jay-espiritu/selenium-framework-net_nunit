@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using NUnit.Framework;
@@ -7,7 +8,6 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using SeleniumFramework.Helpers;
 using SeleniumFramework.Pages;
-
 namespace SeleniumFramework
 {
     [TestFixture]
@@ -20,7 +20,10 @@ namespace SeleniumFramework
         public void Setup()
         {
             var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            _driver = new ChromeDriver(path);
+            var chromeOptions = new ChromeOptions();
+            chromeOptions.AddArguments(new List<string>() { "no-sandbox", "headless", "disable-gpu" });
+
+            _driver = new ChromeDriver(path, chromeOptions);
             _driver.Manage().Window.Maximize();
             _driver.Navigate().GoToUrl("https://the-internet.herokuapp.com/");
             Report.WriteLog("Initialize browser");
