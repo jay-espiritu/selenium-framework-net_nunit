@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using SeleniumFramework.Pages;
 
 namespace SeleniumFramework.Tests
 {
@@ -10,19 +9,19 @@ namespace SeleniumFramework.Tests
         [Test]
         public void TestAcceptAlert()
         {
-            AlertPage alertsPage = _homePage.ClickJavaScriptAlerts("JavaScript Alerts");
+            var alertsPage = _homePage.ClickJavaScriptAlerts("JavaScript Alerts");
             alertsPage.TriggerAlert();
             alertsPage.Alert_clickToAccept();
-            Assert.AreEqual(alertsPage.GetResult(), "You successfuly clicked an alert", "Results text incorrect");
+            Assert.AreEqual(alertsPage.GetResult(), "You successfully clicked an alert", "Results text incorrect");
         }
 
         [Test]
         public void TestGetTextFromAlert()
         {
-            AlertPage alertsPage = _homePage.ClickJavaScriptAlerts("JavaScript Alerts");
+            var alertsPage = _homePage.ClickJavaScriptAlerts("JavaScript Alerts");
             alertsPage.TriggerConfirm();
 
-            string text = alertsPage.Alert_getText();
+            var text = alertsPage.Alert_getText();
             alertsPage.alert_clickToDismiss();
             Assert.AreEqual(text, "I am a JS Confirm", "Alert text incorrect");
         }
@@ -30,10 +29,10 @@ namespace SeleniumFramework.Tests
         [Test]
         public void TestSetInputInAlert()
         {
-            AlertPage alertsPage = _homePage.ClickJavaScriptAlerts("JavaScript Alerts");
+            var alertsPage = _homePage.ClickJavaScriptAlerts("JavaScript Alerts");
             alertsPage.TriggerPrompt();
 
-            string text = "SCREAM!";
+            var text = "SCREAM!";
             alertsPage.Alert_setInput(text);
             alertsPage.Alert_clickToAccept();
             Assert.AreEqual(alertsPage.GetResult(), $"You entered: '{text}'. Results text incorrect");

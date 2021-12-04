@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using SeleniumFramework.Pages;
 
 namespace SeleniumFramework.Tests
 {
@@ -10,10 +9,10 @@ namespace SeleniumFramework.Tests
         [Test]
         public void TestSuccessfulLogin()
         {
-            LoginPage loginPage = _homePage.ClickFormAuthentication();
+            var loginPage = _homePage.ClickFormAuthentication();
             loginPage.SetUsername("tomsmith");
             loginPage.SetPassword("SuperSecretPassword!");
-            SecureAreaPage secureAreaPage = loginPage.ClickLoginButton();
+            var secureAreaPage = loginPage.ClickLoginButton();
             secureAreaPage.GetAlertText();
             Assert.True(secureAreaPage.GetAlertText().Contains("You logged into a secure area!"), "Alert text does not match");
         }
@@ -21,10 +20,10 @@ namespace SeleniumFramework.Tests
         [Test]
         public void TestUnsuccessfulLogin()
         {
-            LoginPage loginPage = _homePage.ClickFormAuthentication();
+            var loginPage = _homePage.ClickFormAuthentication();
             loginPage.SetUsername("tomsmith!");
             loginPage.SetPassword("SuperSecretPassword!");
-            SecureAreaPage secureAreaPage = loginPage.ClickLoginButton();
+            var secureAreaPage = loginPage.ClickLoginButton();
             secureAreaPage.GetAlertText();
             Assert.AreEqual(secureAreaPage.GetAlertText(), "You logged into a secure area!", "Alert text does not match");
         }

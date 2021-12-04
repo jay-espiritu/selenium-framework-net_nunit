@@ -1,5 +1,4 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using OpenQA.Selenium;
 
 namespace SeleniumFramework.Helpers
@@ -13,7 +12,7 @@ namespace SeleniumFramework.Helpers
             _driver = driver;
         }
 
-        public IWebElement Find(By locator)
+        private IWebElement Find(By locator)
         {
             IWebElement element = null;
             try
@@ -27,20 +26,14 @@ namespace SeleniumFramework.Helpers
             return element;
         }
 
-        public void Clicked(By locator)
-        {
+        public void Clicked(By locator)=>
             Find(locator).Click();
-        }
 
-        public void EnterText(string inputText, By locator)
-        {
-
+        public void EnterText(string inputText, By locator) =>
             Find(locator).SendKeys(inputText);
-        }
 
-        public string GetElementText(By locator)
-        {
-            return Find(locator).Text;
-        }
+        public string GetElementText(By locator)=>
+             Find(locator).Text;
+        
     }
 }

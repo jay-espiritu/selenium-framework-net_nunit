@@ -30,16 +30,16 @@ namespace SeleniumFramework
         [TearDown]
         public void TearDown()
         {
-            ScreeshotOnFailure();
+            ScreenshotOnFailure();
             _driver.Quit();
             Report.WriteLog("Closed browser");
         }
 
-        private void ScreeshotOnFailure()
+        private void ScreenshotOnFailure()
         {
             if (TestContext.CurrentContext.Result.Outcome == ResultState.Failure)
             {
-                string folderPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                var folderPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
                 var pathFolder = folderPath + "/Resources/Screenshots/";
                 var screenshot = ((ITakesScreenshot)_driver).GetScreenshot();
                 var filename = TestContext.CurrentContext.Test.MethodName + "(" + DateTime.Now.ToString("ddmmyyyyhhmmss") + ").png";

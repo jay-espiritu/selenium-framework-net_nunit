@@ -9,7 +9,7 @@ namespace SeleniumFramework.Pages
         private readonly IWebDriver _driver;
         private readonly BaseMethods _baseMethods;
 
-        private readonly By FormAuthenticationLink = By.LinkText("Form Authentication");
+        private readonly By _formAuthenticationLink = By.LinkText("Form Authentication");
 
         public HomePage(IWebDriver driver)
         {
@@ -19,7 +19,7 @@ namespace SeleniumFramework.Pages
 
         public LoginPage ClickFormAuthentication()
         {
-            _baseMethods.Clicked(FormAuthenticationLink);
+            _baseMethods.Clicked(_formAuthenticationLink);
             return new LoginPage(_driver);
         }
 
