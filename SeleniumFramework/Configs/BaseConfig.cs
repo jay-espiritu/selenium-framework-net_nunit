@@ -19,7 +19,8 @@ namespace SeleniumFramework
         [SetUp]
         public void Setup()
         {
-            _driver = new ChromeDriver();
+            var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            _driver = new ChromeDriver(path);
             _driver.Manage().Window.Maximize();
             _driver.Navigate().GoToUrl("https://the-internet.herokuapp.com/");
             Report.WriteLog("Initialize browser");
