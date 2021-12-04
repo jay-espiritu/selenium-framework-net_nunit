@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jayespiritu/dev/AutomationFrameworks/selenium-framework-net_nunit/SeleniumFramework/SeleniumFramework/SeleniumFramework.csproj": {}
+    "/Users/jayespiritu/dev/selenium-framework-net_nunit/SeleniumFramework/SeleniumFramework.csproj": {}
   },
   "projects": {
-    "/Users/jayespiritu/dev/AutomationFrameworks/selenium-framework-net_nunit/SeleniumFramework/SeleniumFramework/SeleniumFramework.csproj": {
+    "/Users/jayespiritu/dev/selenium-framework-net_nunit/SeleniumFramework/SeleniumFramework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jayespiritu/dev/AutomationFrameworks/selenium-framework-net_nunit/SeleniumFramework/SeleniumFramework/SeleniumFramework.csproj",
+        "projectUniqueName": "/Users/jayespiritu/dev/selenium-framework-net_nunit/SeleniumFramework/SeleniumFramework.csproj",
         "projectName": "SeleniumFramework",
-        "projectPath": "/Users/jayespiritu/dev/AutomationFrameworks/selenium-framework-net_nunit/SeleniumFramework/SeleniumFramework/SeleniumFramework.csproj",
+        "projectPath": "/Users/jayespiritu/dev/selenium-framework-net_nunit/SeleniumFramework/SeleniumFramework.csproj",
         "packagesPath": "/Users/jayespiritu/.nuget/packages/",
-        "outputPath": "/Users/jayespiritu/dev/AutomationFrameworks/selenium-framework-net_nunit/SeleniumFramework/SeleniumFramework/obj/",
+        "outputPath": "/Users/jayespiritu/dev/selenium-framework-net_nunit/SeleniumFramework/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "/Users/jayespiritu/.config/NuGet/NuGet.Config"
+          "/Users/jayespiritu/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -27,6 +24,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -38,48 +36,49 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[16.5.0, )"
+              "version": "[17.0.0, )"
             },
             "NUnit.ConsoleRunner": {
               "target": "Package",
-              "version": "[3.11.1, )"
+              "version": "[3.13.0, )"
             },
             "NUnit3TestAdapter": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.16.1, )"
+              "version": "[4.1.0, )"
             },
             "ReportPortal.Client": {
               "target": "Package",
-              "version": "[2.1.15, )"
+              "version": "[3.0.5, )"
             },
             "ReportPortal.NUnit": {
               "target": "Package",
-              "version": "[3.7.15, )"
+              "version": "[4.2.0, )"
             },
             "ReportPortal.Shared": {
               "target": "Package",
-              "version": "[2.5.0, )"
+              "version": "[3.1.3, )"
             },
             "Selenium.Support": {
               "target": "Package",
-              "version": "[3.141.0, )"
+              "version": "[4.1.0, )"
             },
             "Selenium.WebDriver": {
               "target": "Package",
-              "version": "[3.141.0, )"
+              "version": "[4.1.0, )"
             },
             "Selenium.WebDriver.ChromeDriver": {
               "target": "Package",
-              "version": "[81.0.4044.6900, )"
+              "version": "[96.0.4664.4500, )"
             },
             "nunit": {
               "target": "Package",
-              "version": "[3.12.0, )"
+              "version": "[3.13.2, )"
             }
           },
           "imports": [
@@ -97,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.402/RuntimeIdentifierGraph.json"
         }
       }
     }
